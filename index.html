@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Background Remover Tool</title>
+</head>
+<body>
+    <header>
+        <h1>MM Background Remover Tool</h1>
+    </header>
+
+    <div class="container">
+        <h2>Upload Image</h2>
+        <input type="file" id="file-input" accept="image/*">
+        <button id="edit-btn" class="button">Edit Background</button>
+        
+        <div class="image-preview hidden">
+            <h2>Image Preview</h2>
+            <img id="preview" alt="Image Preview">
+        </div>
+
+        <div id="color-options" class="color-options hidden">
+            <h2>Select Background Color</h2>
+            <input type="color" id="color-picker" value="#FFFFFF">
+            <button id="add-color-btn" class="button">Add Color</button>
+            <h2>Selected Colors</h2>
+            <div id="selected-colors" class="selected-colors"></div>
+            
+            <h2>Gradient Editor</h2>
+            <div class="gradient-editor">
+                <input type="text" id="gradient-color" placeholder="Enter gradient color (e.g., #FF5733)">
+                <input type="range" id="gradient-position" min="0" max="100" value="50">
+                <button id="add-gradient-btn" class="button">Add Color Stop</button>
+            </div>
+            <!-- <div id="gradient-preview" class="gradient-preview"></div> -->
+        </div>
+
+        <button id="download-transparent-btn" class="button hidden">Download Transparent Image</button>
+        <button id="download-edited-btn" class="button hidden">Download Edited Image</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MultiMian. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
